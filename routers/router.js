@@ -54,7 +54,7 @@ router.get("/admin/updateNavLogo", async(req,res)=>{
        const logo = await navLogos.findOne({_id:"659bdeecd433aae39c96cadb"})
        console.log(logo.navLogoURL);
        //res.json({"logoUrl":logo.navLogoURL});
-       res.send(logo.navLogoURL)
+       res.send(logo)
 })
 
 router.get("/admin/updateHeaderBtnText", async(req,res)=>{
