@@ -99,7 +99,7 @@ router.get("/admin/getEmaildata",async(req,res)=>{
 
     const emailsDetails = await usersEmails.find();
     console.log(emailsDetails);
-    res.send(emailsDetails)
+    res.send(emailsDetails);
     
   } catch (error) {
     res.status(500).json({status:500,error});
