@@ -93,6 +93,20 @@ router.post("/admin/updateHeaderBtnText", async(req,res)=>{
       }
 })
 
+router.get("/admin/getEmaildata",async(req,res)=>{
+
+  try {
+
+    const emailsDetails = await usersEmails.find();
+    console.log(emailsDetails);
+    res.send(emailsDetails)
+    
+  } catch (error) {
+    res.status(500).json({status:500,error});
+  }
+
+})
+
 
 
 module.exports = router;
