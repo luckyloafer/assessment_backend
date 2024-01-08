@@ -19,7 +19,7 @@ router.post('/admin/sendEmail',async (req,res)=>{
         // })
 
 
-        const user = await usersEmails.findOne({name:userName})
+        const user = await usersEmails.findOne({_id:"659c26a78ef51009c4870aad"})
         if(user){
             console.log("present")
         }
