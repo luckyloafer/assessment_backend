@@ -72,8 +72,8 @@ router.post("/admin/updateNavLogo", async(req,res)=>{
       try {
         
         const changeNavLogoURL = await navLogos.findByIdAndUpdate("659bdeecd433aae39c96cadb",{navLogoURL:newNavLogoURL})
-        res.json({"newNavLogoURL":newNavLogoURL});
-        
+        // res.json({"newNavLogoURL":newNavLogoURL});
+        res.send(newNavLogoURL)
       } catch (error) {
         console.log("error in updted header btn text");
       }
@@ -87,7 +87,8 @@ router.post("/admin/updateHeaderBtnText", async(req,res)=>{
       try {
         
         const changeBtnText = await headerBtnTexts.findByIdAndUpdate("659be3f0d433aae39c96cadc",{headerBtnText:newHeaderBtnText})
-        res.json({"newHeaderText":newHeaderBtnText});
+        // res.json({"newHeaderText":newHeaderBtnText});
+        res.send(newHeaderBtnText)
 
       } catch (error) {
         console.log("error in updted header btn text");
